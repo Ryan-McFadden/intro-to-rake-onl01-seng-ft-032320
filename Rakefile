@@ -11,13 +11,13 @@ namespace :greeting do
 end
 
   desc 'drop into the Pry console'
-  task :console => :enviorment do
+  task :console => :enviornment do
     Pry.start 
   end
   
 namespace :db do 
   desc 'migrate changes to your database'
-  task :migrate => :enviorment do
+  task :migrate => :enviornment do
     Student.create_table
   end
   
