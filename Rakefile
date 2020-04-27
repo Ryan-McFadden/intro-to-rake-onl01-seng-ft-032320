@@ -17,12 +17,12 @@ end
   
 namespace :db do 
   desc 'migrate changes to your database'
-  tak :migrate => :enviorment do
+  task :migrate => :enviorment do
     Student.create_table
   end
   
   desc 'seed the database with some dummy data'
-  tak :seed do
+  task :seed do
     require_relative './db/seeds.rb'
   end
 end
