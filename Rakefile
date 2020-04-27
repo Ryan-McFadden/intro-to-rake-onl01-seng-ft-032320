@@ -15,4 +15,14 @@ end
     Pry.start 
   end
   
+namespace :db do 
+  desc 'migrate changes to your database'
+  tak :migrate => :enviorment do
+    Student.create_table
+  end
   
+  desc 'seed the database with some dummy data'
+  tak :seed do
+    require_relative './db/seeds.rb'
+  end
+end
